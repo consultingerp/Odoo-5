@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem name="Mass Payments" action="action_sf_account_mass_payments" id="menu_action_account_payments_payable" parent="account.menu_finance_payables" sequence="30"/>
+
+
+
+    </data>
+</odoo>
