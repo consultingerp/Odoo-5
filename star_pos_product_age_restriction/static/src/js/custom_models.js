@@ -143,7 +143,9 @@ odoo.define('star_pos_product_age_restriction.custom_models_js', function(requir
         widget: POSErrorPopupWidget
     });
 
-    models.load_fields('product.product', ['apply_age_limit', 'cust_minium_age']);
+    // models.load_fields('product.product', ['apply_age_limit', 'cust_minium_age']);
+    pos_models.load_fields('product.product', ['apply_age_limit', 'cust_minimum_age']);
+
     // models.splice(18, 0, {
     //     model: 'product.product',
     //     // todo remove list_price in master, it is unused
