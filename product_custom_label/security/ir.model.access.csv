@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_stock_produc_tag,stock_produc_tag.stock_produc_tag,model_stock_product_tag,,1,1,1,1
+access_stock_produc_tag_line,stock_produc_tag.stock_produc_tag_line,model_stock_product_tag_line,,1,1,1,1

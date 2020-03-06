@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="product_custom_label_assets_backend" name="product_custom_label assets"
+              inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" type="text/scss" href="/product_custom_label/static/src/scss/main.scss"/>
+        </xpath>
+    </template>
+</odoo>
