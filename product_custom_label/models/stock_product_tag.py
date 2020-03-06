@@ -2,6 +2,17 @@
 
 from odoo import fields, models
 
+REPORT_TEMPLATE = [
+    ('product_custom_label.report_product_label',
+     'Label 57x35mm (A4: 21 pcs on sheet, 3x7) Extra 1'),
+    ('product_custom_label.report_product_label_2',
+     'Label 57x35mm (A4: 21 pcs on sheet, 3x7) Extra 2'),
+    ('product_custom_label.report_product_label_3',
+     'Label 57x35mm (A4: 21 pcs on sheet, 3x7) Extra 3'),
+    ('product_custom_label.report_product_label_4',
+     'Label 57x35mm (A4: 21 pcs on sheet, 3x7) Extra 4'),
+]
+
 
 class ProductTemplate(models.Model):
     _inherit = 'product.template'
@@ -22,8 +33,7 @@ class StockProductTag(models.Model):
                                   required=True,
                                   default=35)
     template = fields.Selection(
-        selection=[('product_custom_label.report_product_label',
-                    'Label 57x35mm (A4: 21 pcs on sheet, 3x7)')],
+        selection=REPORT_TEMPLATE,
         string='Label template',
         default='product_custom_label.report_product_label',
     )

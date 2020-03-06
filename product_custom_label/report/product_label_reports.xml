@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
 
     <record id="paperformat_a4_clear" model="report.paperformat">
@@ -25,6 +25,33 @@
             paperformat="product_custom_label.paperformat_a4_clear"
             name="product_custom_label.report_product_label_view"
             file="product_custom_label.report_product_label_view"
+    />
+    <report
+            id="report_product_label_2"
+            string="Product labels 57x35mm Extra 2"
+            model="product.label"
+            report_type="qweb-html"
+            paperformat="product_custom_label.paperformat_a4_clear"
+            name="product_custom_label.report_product_label_2_view"
+            file="product_custom_label.report_product_label_2_view"
+    />
+    <report
+            id="report_product_label_3"
+            string="Product labels 57x35mm Extra 3"
+            model="product.label"
+            report_type="qweb-html"
+            paperformat="product_custom_label.paperformat_a4_clear"
+            name="product_custom_label.report_product_label_3_view"
+            file="product_custom_label.report_product_label_3_view"
+    />
+    <report
+            id="report_product_label_4"
+            string="Product labels 57x35mm Extra 4"
+            model="product.label"
+            report_type="qweb-html"
+            paperformat="product_custom_label.paperformat_a4_clear"
+            name="product_custom_label.report_product_label_4_view"
+            file="product_custom_label.report_product_label_4_view"
     />
 
 </odoo>

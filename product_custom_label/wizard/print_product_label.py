@@ -3,7 +3,6 @@
 from odoo import api, fields, models, _
 from odoo.exceptions import Warning
 
-
 # TODO:  tests - try_report_action
 
 
@@ -19,7 +18,7 @@ class PrintProductLabel(models.TransientModel):
             for product in products:
                 label = self.env['product.label'].create({
                     'product_id':
-                        product.product_variant_id.id,
+                    product.product_variant_id.id,
                 })
                 res.append(label.id)
         elif self._context.get('active_model') == 'product.product':
@@ -28,7 +27,7 @@ class PrintProductLabel(models.TransientModel):
             for product in products:
                 label = self.env['product.label'].create({
                     'product_id':
-                        product.id,
+                    product.id,
                 })
                 res.append(label.id)
         return res
@@ -40,13 +39,11 @@ class PrintProductLabel(models.TransientModel):
         string='Labels for Products',
         default=_get_products,
     )
-    template = fields.Selection(
-        selection=[('product_custom_label.report_product_label',
-                    'Label 57x35mm (A4: 21 pcs on sheet, 3x7)')],
-        string='Label template',
-        default='product_custom_label.report_product_label',
-    )
-
+    # template = fields.Selection(
+    #     selection=REPORT_TEMPLATE,
+    #     string='Label template',
+    #     default='product_custom_label.report_product_label',
+    # )
     template_id = fields.Many2one(
         comodel_name="stock.product.tag",
         string="Template labels",
@@ -79,7 +76,7 @@ class PrintProductLabel(models.TransientModel):
         }
         print(data)
 
-        return self.env.ref(self.template).with_context(
+        return self.env.ref(self.template_id.template).with_context(
             discard_logo_check=True).report_action(self, data=data)
 
     @api.multi
