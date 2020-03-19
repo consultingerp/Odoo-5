@@ -3,7 +3,7 @@
 from odoo import fields, models
 
 REPORT_TEMPLATE = [
-    ('product_custom_label.report_product_label',
+    ('product_custom_label.report_product_label_A4_57x35',
      'Label 57x35mm (A4: 21 pcs on sheet, 3x7) Extra 1'),
     ('product_custom_label.report_product_label_2',
      'Label 57x35mm (A4: 21 pcs on sheet, 3x7) Extra 2'),
