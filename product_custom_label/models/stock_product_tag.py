@@ -32,10 +32,16 @@ class StockProductTag(models.Model):
     label_height = fields.Integer(string="Label Height (MM)",
                                   required=True,
                                   default=35)
+    # template = fields.Selection(
+    #     selection=REPORT_TEMPLATE,
+    #     string='Label template',
+    #     default='product_custom_label.report_product_label',
+    # )
+
     template = fields.Selection(
-        selection=REPORT_TEMPLATE,
+        selection=[('product_custom_label.report_product_label_A4_57x35', 'Label 57x35mm (A4: 21 pcs on sheet, 3x7)')],
         string='Label template',
-        default='product_custom_label.report_product_label',
+        default='product_custom_label.report_product_label_A4_57x35',
     )
 
     tags_line_ids = fields.One2many(

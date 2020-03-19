@@ -2,15 +2,12 @@
 {
     'name':
     "Product Custom Label",
-    'author':
-    "adre",
+    'author':"adre",
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/12.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
-    'category':
-    'Warehouse',
-    'version':
-    '12.0.1.0.1',
+    'category': 'Extra Tools',
+    'version': '12.0.1.0.4',
     'description':
     """
     Module allows to print custom product labels on different paper formats.
@@ -32,8 +29,11 @@
         'data/stock_product_tag_data.xml',
         'views/menus.xml',
     ],
+	'application': False,
+    'installable': True,
+    'auto_install': False,
     # only loaded in demonstration mode
-    'demo': [
-        'demo/demo.xml',
-    ],
+    # 'demo': [
+    #     'demo/demo.xml',
+    # ],
 }

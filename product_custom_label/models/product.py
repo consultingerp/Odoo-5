@@ -26,3 +26,38 @@ class ProductTemplate(models.Model):
         string="Label attribute 5",
         required=False,
     )
+
+
+class ProductProduct(models.Model):
+    _inherit = 'product.product'
+
+    label_attr_1 = fields.Char(
+        string="Label attribute 1",
+        related="product_tmpl_id.label_attr_1",
+        readonly=False,
+        required=False,
+    )
+    label_attr_2 = fields.Char(
+        string="Label attribute 2",
+        related="product_tmpl_id.label_attr_2",
+        required=False,
+        readonly=False
+    )
+    label_attr_3 = fields.Char(
+        string="Label attribute 3",
+        related="product_tmpl_id.label_attr_3",
+        required=False,
+        readonly=False
+    )
+    label_attr_4 = fields.Char(
+        string="Label attribute 4",
+        related="product_tmpl_id.label_attr_4",
+        required=False,
+        readonly=False
+    )
+    label_attr_5 = fields.Char(
+        string="Label attribute 5",
+        related="product_tmpl_id.label_attr_5",
+        required=False,
+        readonly=False
+    )

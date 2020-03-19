@@ -23,6 +23,26 @@
             </field>
         </record>
 
+        <record id="view_inherit_product_product_label_template_form" model="ir.ui.view">
+            <field name="name">view.inherit.product.product.label.template.form</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+
+                <!-- position: after|before|replace|attributes|inside -->
+                <xpath expr="//field[@name='barcode']" position="after">
+                    <!-- Add your fields or attributes here -->
+                    <field name="label_attr_1" readonly="False"/>
+                    <field name="label_attr_2" readonly="False"/>
+                    <field name="label_attr_3" readonly="False"/>
+                    <field name="label_attr_4" readonly="False"/>
+                    <field name="label_attr_5" readonly="False"/>
+                </xpath>
+
+
+            </field>
+        </record>
+
 
     </data>
 </odoo>

@@ -6,9 +6,6 @@
             <field name="model">stock.product.tag</field>
             <field name="arch" type="xml">
                 <form string="">
-                    <header>
-
-                    </header>
                     <sheet>
                         <div class="oe_title">
                             <h1>
@@ -16,14 +13,14 @@
                             </h1>
                             <field name="template" string="Label template" widget="radio"/>
                         </div>
-                        <group string="Dimensions">
-                            <group>
-                                <field name="label_width"/>
-                            </group>
-                            <group>
-                                <field name="label_height"/>
-                            </group>
-                        </group>
+<!--                        <group string="Dimensions">-->
+<!--                            <group>-->
+<!--                                <field name="label_width"/>-->
+<!--                            </group>-->
+<!--                            <group>-->
+<!--                                <field name="label_height"/>-->
+<!--                            </group>-->
+<!--                        </group>-->
                         <notebook>
                             <page string="Attributes to print">
                                 <group>

@@ -5,7 +5,7 @@ from odoo import api, models
 
 
 class ProductTagReport(models.AbstractModel):
-    _name = 'report.product_custom_label.report_product_label_view'
+    _name = 'report.product_custom_label.report_product_label_57x35_template'
     _description = 'Stock Product Tag Report'
 
     @api.model
@@ -14,10 +14,10 @@ class ProductTagReport(models.AbstractModel):
         template = data['form']['template']
 
         product_tag = self.env['stock.product.tag'].browse(template)
-        product_labels = self.env['product.label'].browse(labels)
+        product_labels = self.env['print.product.label.line'].browse(labels)
 
         labels = [label for label in product_labels]
-        print(labels)
+        print(labels, product_tag)
 
         docs = {
             'product_tag': product_tag,
