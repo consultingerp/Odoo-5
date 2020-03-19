@@ -14,7 +14,7 @@
                         <div style="width: 10%;display:inline-block;">
                             <span>Our Price</span>
                         </div>
-                        <div style="width: 60%;display:inline-block;font-size: 32px;font-weight:bold;">
+                        <div style="width: 60%;display:inline-block;font-size: 28px;font-weight:bold;">
                             <span t-esc="label.product_id.currency_id.symbol"/>
                             <span t-esc="label.product_id.list_price"/>
                         </div>
